@@ -1,0 +1,8 @@
+[user]
+name = Shu Shiotani
+email = your@email.com
+
+[alias]
+co = checkout
+br = branch
+ci = commit
