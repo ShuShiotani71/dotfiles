@@ -1,8 +1,8 @@
 [user]
-name = Shu Shiotani
-email = your@email.com
+  name = ShuShiotani71
+  email = shu.shiotani70@gmail.com
 
 [alias]
-co = checkout
-br = branch
-ci = commit
+  co = checkout
+  br = branch
+  ci = commit

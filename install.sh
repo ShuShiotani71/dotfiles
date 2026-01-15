@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 set -e
 
-ln -sf ~/dotfiles/bash/bashrc ~/.bashrc
-ln -sf ~/dotfiles/bash/bash_aliases ~/.bash_aliases
+# files (f flag replaces file if exists)
+ln -sf ~/dotfiles/bash/bashrc ~/.bashrc             # only for containers
+ln -sf ~/dotfiles/bash/bash_aliases ~/.bash_aliases # only for containers
 ln -sf ~/dotfiles/git/gitconfig ~/.gitconfig
-ln -sf ~/dotfiles/nvim ~/.config/nvim
 ln -sf ~/dotfiles/starship/starship.toml ~/.config/starship.toml
-ln -sf ~/dotfiles/wezterm ~/.config/wezterm
+
+# directories (must remove directory manually first)
+rm -rf ~/.config/nvim
+ln -s ~/dotfiles/nvim ~/.config/nvim
+rm -rf ~/.config/wezterm
+ln -s ~/dotfiles/wezterm ~/.config/wezterm
