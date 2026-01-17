@@ -8,6 +8,12 @@ config.window_background_opacity = 1
 config.color_scheme = "Tokyo Night Moon"
 config.font = wezterm.font("JetBrains Mono")
 
+config.default_cursor_style = "BlinkingBlock"
+config.cursor_blink_rate = 480
+config.mux_enable_ssh_agent = false -- wezterm tries to mess with ssh
+config.initial_cols = 100
+config.initial_rows = 24
+
 ----------------------------------------------------
 -- Tab
 ----------------------------------------------------
@@ -74,16 +80,5 @@ config.disable_default_key_bindings = true
 config.keys = require("keybindings").keys
 config.key_tables = require("keybindings").key_tables
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
-
-----------------------------------------------------
--- cursor
-----------------------------------------------------
-config.default_cursor_style = "BlinkingBlock"
-config.cursor_blink_rate = 480
-
-----------------------------------------------------
--- ssh
-----------------------------------------------------
-config.mux_enable_ssh_agent = false
 
 return config
