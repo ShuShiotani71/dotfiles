@@ -11,11 +11,6 @@
     "key":     "ctrl+l",
     "command": "workbench.action.terminal.focus"
 },
-{
-    "key":     "ctrl+l",
-    "command": "workbench.action.focusActiveEditorGroup",
-    "when":    "terminalFocus"
-},
 
 
 // switching between windows
@@ -38,11 +33,9 @@
 {
     "key": "ctrl+h",
     "command": "workbench.explorer.fileView.focus",
-    "when": "!filesExplorerFocus"
 },
 {
-    "key": "ctrl+h",
+    "key": "ctrl+z",
     "command": "workbench.action.focusActiveEditorGroup",
-    "when": "!editorTextFocus"
 },
 ]
