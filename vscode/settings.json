@@ -1,0 +1,84 @@
+{
+// vim
+// ---
+"vim.insertModeKeyBindings": [
+  {
+    "before": ["j", "j"],
+    "after": ["<Esc>"]
+  },
+],
+"vim.useSystemClipboard": true,
+"vim.vimrc.enable": true,
+"vim.vimrc.path": "/home/shush/.vimrc",
+"vim.easymotion": true,
+
+
+// editor
+// ------
+"editor.minimap.enabled": false,
+"editor.hover.enabled": "off",
+// theme
+"workbench.colorTheme": "Visual Studio Dark",
+// scroll wheel color
+"workbench.colorCustomizations": {
+    "scrollbarSlider.background": "#008000", // scrollbar
+    "tab.activeBackground": "#26549e", // active tab
+},
+// tabs
+"workbench.editor.wrapTabs": true,
+// file tree indentation
+"workbench.tree.indent": 20,
+// for inserting newline at end of file automatically
+"files.insertFinalNewline": true,
+// dont highlight non ascii characters (eg japanese)
+"editor.unicodeHighlight.nonBasicASCII": false,
+// wrap lines
+"editor.wordWrap": "on",
+
+
+// jupyter
+// -------
+"jupyter.askForKernelRestart": false,
+"notebook.lineNumbers": "on",
+"notebook.output.scrolling": true,
+// ipywidget stuff
+"jupyter.widgetScriptSources": [
+    "jsdelivr.com",
+    "unpkg.com"
+],
+
+
+// copilot
+// -------
+"github.copilot.enable": {
+  "*": false,
+  "plaintext": false,
+  "markdown": false,
+  "scminput": false
+},
+
+
+// PYTHON
+// ------
+// Black formatter
+"[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": false,
+    "editor.showUnused": false,
+},
+"black-formatter.args": [
+    "--line-length",
+    "99"
+],
+
+
+// INTEGRATED TERMINAL
+// -------------------
+"terminal.integrated.env.linux": {},
+// integrated terminal position
+"workbench.panel.defaultLocation": "right",
+// blink integrated terminal cursor when focused
+"terminal.integrated.cursorBlinking": true,
+// confirm drag and drop
+"explorer.confirmDragAndDrop": false,
+}

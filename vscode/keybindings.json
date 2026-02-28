@@ -1,0 +1,48 @@
+[
+// disable ctrl+e so that 'go to end' can be used in integrated terminal
+{
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+},
+ 
+
+// Toggle between terminal and editor focus
+{
+    "key":     "ctrl+l",
+    "command": "workbench.action.terminal.focus"
+},
+{
+    "key":     "ctrl+l",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when":    "terminalFocus"
+},
+
+
+// switching between windows
+{
+    "key": "ctrl+j",
+    "command": "workbench.action.nextEditor"
+},
+{
+    "key": "ctrl+k",
+    "command": "workbench.action.previousEditor"
+},
+
+// closing tabs
+{
+    "key": "ctrl+b",
+    "command": "workbench.action.closeActiveEditor"
+},
+
+// switching between editor and file explorer
+{
+    "key": "ctrl+h",
+    "command": "workbench.explorer.fileView.focus",
+    "when": "!filesExplorerFocus"
+},
+{
+    "key": "ctrl+h",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "!editorTextFocus"
+},
+]
