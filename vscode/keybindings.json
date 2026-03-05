@@ -4,38 +4,40 @@
     "key": "ctrl+e",
     "command": "-workbench.action.quickOpen"
 },
- 
-
-// Toggle between terminal and editor focus
-{
-    "key":     "ctrl+l",
-    "command": "workbench.action.terminal.focus"
-},
-
 
 // switching between windows
 {
-    "key": "ctrl+j",
+    "key": "ctrl+tab",
     "command": "workbench.action.nextEditor"
 },
 {
-    "key": "ctrl+k",
+    "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditor"
 },
 
 // closing tabs
 {
-    "key": "ctrl+b",
+    "key": "ctrl+w",
     "command": "workbench.action.closeActiveEditor"
 },
 
-// switching between editor and file explorer
+// switching between editor, file explorer, and integrated terminal
+// had to make the keymaps bit complex so that they work even for the terminal
+// (as I did not want to disable any of the default commands)
 {
-    "key": "ctrl+h",
+    "key": "ctrl+shift+f", // f for file explorer
     "command": "workbench.explorer.fileView.focus",
 },
 {
-    "key": "ctrl+z",
+    "key": "ctrl+shift+e", // e for editor
     "command": "workbench.action.focusActiveEditorGroup",
+},
+{
+    "key": "ctrl+shift+t", // t for terminal
+    "command": "workbench.action.terminal.focus"
+},
+{
+    "key": "ctrl+shift+a", // a for AI
+    "command": "workbench.panel.chat.view.copilot.focus",
 },
 ]

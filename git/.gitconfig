@@ -1,0 +1,12 @@
+[user]
+  name = "your username"
+  email = "your email"
+
+[alias]
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  ad = add
+  ps = push
+  lg = log

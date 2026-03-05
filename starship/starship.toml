@@ -7,12 +7,12 @@ $git_status\
 \n$python $character
 """
 
-right_format = """
-$cmd_duration\
-$username\
-✨
-$time
-"""
+# right_format = """
+# $cmd_duration\
+# $username\
+# ✨
+# $time
+# """
 
 # コマンドラインに1行分のスペースを入れる
 add_newline = true
@@ -43,11 +43,11 @@ format = '[ $path ]($style)[$read_only]($read_only_style)'
 
 
 # not working for some reason
-[directory.substitutions]
-"/home/shush/Documents" = "󰈙 "
-"/home/shush/Downloads" = " "
-"/home/shush/Music" = " "
-"/home/shush/Pictures" = " "
+# [directory.substitutions]
+# "/home/shush/Documents" = "󰈙 "
+# "/home/shush/Downloads" = " "
+# "/home/shush/Music" = " "
+# "/home/shush/Pictures" = " "
 
 [aws]
 disabled = true

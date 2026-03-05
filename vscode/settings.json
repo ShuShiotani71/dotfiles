@@ -1,84 +1,129 @@
 {
-// vim
-// ---
-"vim.insertModeKeyBindings": [
-  {
-    "before": ["j", "j"],
-    "after": ["<Esc>"]
-  },
-],
-"vim.useSystemClipboard": true,
-"vim.vimrc.enable": true,
-"vim.vimrc.path": "/home/shush/.vimrc",
-"vim.easymotion": true,
+    // ---
+    // VIM
+    // ---
+    // needed here, even if defined inside .vimrc would not apply to vscode
+    "vim.useSystemClipboard": true,
+    // idea is to put everything in .vimrc for better portability
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "/home/shush/.vimrc",
+    // extensions
+    "vim.easymotion": true, // leader + leader + s + {char}
+    "vim.sneak": true, // s + {char0}{char1}, ; to go forward and , to go backward
+    "vim.surround": true, // ds, cs, ys + motion (normal mode), and S (visual mode)
+    "vim.commentary": true, // gcc or gc
+    "vim.indentObject": true, // {v,d,y,c,>,gc} + {ii, ai, aI} where ii is current block, ai includes the top bit as well eg for, def, if, and aI is including bottom as well so eg bash, java
+    "vim.replaceWithRegister": true, // gr + motion
+    "vim.camelCaseMotion.enable": true, // leader + w,b,e
 
+    // ------
+    // EDITOR
+    // ------
+    "editor.minimap.enabled": false,
+    "editor.hover.enabled": "on",
+    "workbench.colorTheme": "Halcyon",
+    "workbench.colorCustomizations": {
+        // scrollbar
+        "scrollbarSlider.background": "#bae67e40",
+        // active tab
+        "tab.activeBackground": "#bae67e40",
+        // file explorer
+        "list.activeSelectionBackground": "#bae67e40",
+        "list.inactiveSelectionBackground": "#bae67e40",
+        // borders
+        // "panel.border": "#bae67e40",
+        // "sideBar.border": "#bae67e40",
+        // status bar
+        "statusBar.foreground": "#d7dce2",
+        // "statusBar.background": "#bae67e40",
+        // "statusBar.noFolderBackground": "#bae67e40",
+        // "statusBar.debuggingBackground": "#bae67e40",
+        "statusBar.border": "#d7dce230",
+        "statusBar.debuggingBorder": "#d7dce230",
+        "statusBar.noFolderBorder": "#d7dce230",
+        // terminal
+        "terminal.background": "#171c2815"
+    },
+    // make scrollbars always visible regardless of cursor position
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.horizontal": "visible",
+    // for scrolling smooth (especially H and L in vim)
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    // tabs
+    "workbench.editor.wrapTabs": true,
+    // file tree indentation
+    "workbench.tree.indent": 15,
+    // for inserting newline at end of file automatically
+    "files.insertFinalNewline": true,
+    // dont highlight non ascii characters (eg japanese)
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    // wrap lines
+    "editor.wordWrap": "on",
 
-// editor
-// ------
-"editor.minimap.enabled": false,
-"editor.hover.enabled": "off",
-// theme
-"workbench.colorTheme": "Visual Studio Dark",
-// scroll wheel color
-"workbench.colorCustomizations": {
-    "scrollbarSlider.background": "#008000", // scrollbar
-    "tab.activeBackground": "#26549e", // active tab
-},
-// tabs
-"workbench.editor.wrapTabs": true,
-// file tree indentation
-"workbench.tree.indent": 20,
-// for inserting newline at end of file automatically
-"files.insertFinalNewline": true,
-// dont highlight non ascii characters (eg japanese)
-"editor.unicodeHighlight.nonBasicASCII": false,
-// wrap lines
-"editor.wordWrap": "on",
+    // -------
+    // JUPYTER
+    // -------
+    "jupyter.askForKernelRestart": false,
+    "notebook.lineNumbers": "on",
+    "notebook.output.scrolling": true,
+    // ipywidget stuff
+    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
 
+    // -------
+    // COPILOT
+    // -------
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
 
-// jupyter
-// -------
-"jupyter.askForKernelRestart": false,
-"notebook.lineNumbers": "on",
-"notebook.output.scrolling": true,
-// ipywidget stuff
-"jupyter.widgetScriptSources": [
-    "jsdelivr.com",
-    "unpkg.com"
-],
-
-
-// copilot
-// -------
-"github.copilot.enable": {
-  "*": false,
-  "plaintext": false,
-  "markdown": false,
-  "scminput": false
-},
-
-
-// PYTHON
-// ------
-// Black formatter
-"[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    // ---------
+    // ALL LANGS
+    // ---------
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
     "editor.formatOnSave": false,
-    "editor.showUnused": false,
-},
-"black-formatter.args": [
-    "--line-length",
-    "99"
-],
+    // necessary for enabling path intellisense
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
 
+    // ------
+    // PYTHON
+    // ------
+    // Black formatter
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": false,
+        "editor.showUnused": false,
+        // reorder imports upon save
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "black-formatter.args": ["--line-length", "99"],
+    // for isort to work with black
+    "isort.args": ["--profile", "black"],
 
-// INTEGRATED TERMINAL
-// -------------------
-"terminal.integrated.env.linux": {},
-// integrated terminal position
-"workbench.panel.defaultLocation": "right",
-// blink integrated terminal cursor when focused
-"terminal.integrated.cursorBlinking": true,
-// confirm drag and drop
-"explorer.confirmDragAndDrop": false,
+    // -------------------
+    // INTEGRATED TERMINAL
+    // -------------------
+    "terminal.integrated.env.linux": {},
+    // integrated terminal position
+    "workbench.panel.defaultLocation": "right",
+    // blink integrated terminal cursor when focused
+    "terminal.integrated.cursorBlinking": true,
+    // necessary for blinking inside tmux
+    "terminal.integrated.gpuAcceleration": "on",
+
+    // --------
+    // EXPLORER
+    // --------
+    // confirm drag and drop
+    "explorer.confirmDragAndDrop": false,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }

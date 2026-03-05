@@ -6,7 +6,7 @@ config.font_size = 12.0
 config.use_ime = true -- for japanese
 config.window_background_opacity = 1
 config.color_scheme = "Tokyo Night Moon"
-config.font = wezterm.font("JetBrains Mono")
+-- config.font = wezterm.font("JetBrains Mono")
 
 config.default_cursor_style = "BlinkingBlock"
 config.cursor_blink_rate = 480
@@ -76,9 +76,9 @@ end)
 ----------------------------------------------------
 -- keybindings
 ----------------------------------------------------
-config.disable_default_key_bindings = true
-config.keys = require("keybindings").keys
-config.key_tables = require("keybindings").key_tables
-config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
+-- config.disable_default_key_bindings = true
+-- config.keys = require("keybindings").keys
+-- config.key_tables = require("keybindings").key_tables
+-- config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 2000 }
 
 return config
