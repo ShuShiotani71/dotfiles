@@ -6,7 +6,7 @@
     "vim.useSystemClipboard": true,
     // idea is to put everything in .vimrc for better portability
     "vim.vimrc.enable": true,
-    "vim.vimrc.path": "/home/shush/.vimrc",
+    "vim.vimrc.path": "~/.vimrc",
     // extensions
     "vim.easymotion": true, // leader + leader + s + {char}
     "vim.sneak": true, // s + {char0}{char1}, ; to go forward and , to go backward

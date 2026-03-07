@@ -1,9 +1,9 @@
 # source some stuffs if exist
 [ -f ~/.bash_aliases ] && source ~/.bash_aliases
-[ -f ~/.bash_env ] && source ~/.bash_env
 
 
 # PS1
+# not gonna use starship and stuff as I dont wanna introduce dependencies
 generate_ps1() {
   # Load git prompt helper
   # Path varies by system; try common locations
