@@ -2,8 +2,11 @@
 set -e
 
 # bash
-ln -sf ~/dotfiles/bash/.bashrc ~/.bashrc             # only for containers
-ln -sf ~/dotfiles/bash/.bash_aliases ~/.bash_aliases # only for containers
+if [ -f ~/.bashrc ]; do
+    echo ". ~/dotfiles/bash/.bashrc" >> ~/.bashrc
+else
+    ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
+ln -sf ~/dotfiles/bash/.bash_aliases ~/.bash_aliases
 
 # others
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
