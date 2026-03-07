@@ -108,6 +108,16 @@
     // for isort to work with black
     "isort.args": ["--profile", "black"],
 
+    // ---------
+    // C and CPP
+    // ---------
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+
     // -------------------
     // INTEGRATED TERMINAL
     // -------------------
