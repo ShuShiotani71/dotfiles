@@ -1,43 +1,52 @@
 [
-// disable ctrl+e so that 'go to end' can be used in integrated terminal
-{
-    "key": "ctrl+e",
-    "command": "-workbench.action.quickOpen"
-},
+    // disable ctrl+e so that 'go to end' can be used in integrated terminal
+    {
+        "key": "ctrl+e",
+        "command": "-workbench.action.quickOpen"
+    },
 
-// switching between windows
-{
-    "key": "ctrl+tab",
-    "command": "workbench.action.nextEditor"
-},
-{
-    "key": "ctrl+shift+tab",
-    "command": "workbench.action.previousEditor"
-},
+    // switching between windows
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.nextEditor"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.previousEditor"
+    },
 
-// closing tabs
-{
-    "key": "ctrl+w",
-    "command": "workbench.action.closeActiveEditor"
-},
+    // closing tabs
+    {
+        "key": "ctrl+w",
+        "command": "workbench.action.closeActiveEditor"
+    },
 
-// switching between editor, file explorer, and integrated terminal
-// had to make the keymaps bit complex so that they work even for the terminal
-// (as I did not want to disable any of the default commands)
-{
-    "key": "ctrl+shift+f", // f for file explorer
-    "command": "workbench.explorer.fileView.focus"
-},
-{
-    "key": "ctrl+shift+e", // e for editor
-    "command": "workbench.action.focusActiveEditorGroup"
-},
-{
-    "key": "ctrl+shift+t", // t for terminal
-    "command": "workbench.action.terminal.focus"
-},
-{
-    "key": "ctrl+shift+a", // a for AI
-    "command": "workbench.panel.chat.view.copilot.focus"
-}
+    // switching between editor, file explorer, and integrated terminal
+    // had to make the keymaps bit complex so that they work even for the terminal
+    // (as I did not want to disable any of the default commands)
+    {
+        "key": "ctrl+shift+f", // f for file explorer
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+shift+e", // e for editor
+        "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "ctrl+shift+t", // t for terminal
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+shift+a", // a for AI
+        "command": "workbench.panel.chat.view.copilot.focus"
+    },
+    // Increase/Decrease Width of the active editor pane
+    {
+        "key": "ctrl+shift+k",
+        "command": "workbench.action.increaseViewSize"
+    },
+    {
+        "key": "ctrl+shift+j",
+        "command": "workbench.action.decreaseViewSize"
+    }
 ]
