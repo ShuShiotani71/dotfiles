@@ -26,11 +26,11 @@
 // (as I did not want to disable any of the default commands)
 {
     "key": "ctrl+shift+f", // f for file explorer
-    "command": "workbench.explorer.fileView.focus",
+    "command": "workbench.explorer.fileView.focus"
 },
 {
     "key": "ctrl+shift+e", // e for editor
-    "command": "workbench.action.focusActiveEditorGroup",
+    "command": "workbench.action.focusActiveEditorGroup"
 },
 {
     "key": "ctrl+shift+t", // t for terminal
@@ -38,6 +38,6 @@
 },
 {
     "key": "ctrl+shift+a", // a for AI
-    "command": "workbench.panel.chat.view.copilot.focus",
+    "command": "workbench.panel.chat.view.copilot.focus"
 },
 ]
