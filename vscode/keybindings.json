@@ -39,5 +39,5 @@
 {
     "key": "ctrl+shift+a", // a for AI
     "command": "workbench.panel.chat.view.copilot.focus"
-},
+}
 ]
