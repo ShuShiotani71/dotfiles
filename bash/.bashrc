@@ -54,3 +54,4 @@ fi
 
 # use vim keybindings in terminal prompt
 set -o vi
+bind '"jj":"\e"'
