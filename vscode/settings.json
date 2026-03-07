@@ -42,7 +42,7 @@
         "statusBar.debuggingBorder": "#d7dce230",
         "statusBar.noFolderBorder": "#d7dce230",
         // terminal
-        "terminal.background": "#171c2815"
+        "terminal.background": "#171c2820"
     },
     // make scrollbars always visible regardless of cursor position
     "editor.scrollbar.vertical": "visible",
@@ -54,7 +54,7 @@
     // tabs
     "workbench.editor.wrapTabs": true,
     // file tree indentation
-    "workbench.tree.indent": 15,
+    "workbench.tree.indent": 20,
     // for inserting newline at end of file automatically
     "files.insertFinalNewline": true,
     // dont highlight non ascii characters (eg japanese)
