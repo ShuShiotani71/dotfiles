@@ -50,3 +50,7 @@ generate_ps1
 if [[ $- == *i* ]] && [ -z "$TMUX" ]; then
   tmux new-session
 fi
+
+
+# use vim keybindings in terminal prompt
+set -o vi

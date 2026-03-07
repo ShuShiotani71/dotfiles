@@ -7,6 +7,7 @@ if [ -f ~/.bashrc ]; do
 else
     ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
 ln -sf ~/dotfiles/bash/.bash_aliases ~/.bash_aliases
+ln -sf ~/dotfiles/bash/.inputrc ~/.inputrc
 
 # others
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
