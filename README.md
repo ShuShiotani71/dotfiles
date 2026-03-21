@@ -1,7 +1,13 @@
 # Dotfiles
 ## Installation
 ```
+# for system level things; expected to be run locally for the
+# first time, as well as for containers
 $ bash install.sh
+
+# for vscode stuff; to be run locally if you're just sshing into
+# containers using extension
+$ bash setup_vscode.sh
 ```
 ## Comments
 - The main philosophy behind my toolstack is to rely on as few tools as possible in order to reduce the amount of dependencies. Therefore I only use what is absolutely necessary and try to use what is found on most systems by default. Another important factor is AI integration; since most AI IDEs are vscode based, makes sense to use it for future-proofing.
