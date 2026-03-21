@@ -1,0 +1,5 @@
+vim
+tmux
+tree
+tar
+zip
