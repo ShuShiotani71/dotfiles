@@ -12,7 +12,6 @@ alias .3='cd ../../../'
 alias .4='cd ../../../../'
 alias .5='cd ../../../../..'
 
-alias mkdir='mkdir -pv'
 alias reload='. ~/.bashrc'
 alias path='echo -e ${PATH//:/\\n}'
 alias h='history'
