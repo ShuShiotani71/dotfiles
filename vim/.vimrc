@@ -28,3 +28,8 @@ let &t_SI = "\e[5 q"
 let &t_SR = "\e[3 q"
 " Blinking block for Normal Mode
 let &t_EI = "\e[1 q"
+
+" upon startup go into insert mode then escape back into normal mode immediately
+" in order for the cursor styles to always take effect
+autocmd VimEnter * execute "normal! i\<Esc>"
+
