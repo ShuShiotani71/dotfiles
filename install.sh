@@ -14,3 +14,6 @@ ln -sf ~/dotfiles/bash/.inputrc ~/.inputrc
 ln -sf ~/dotfiles/git/.gitconfig ~/.gitconfig
 ln -sf ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/vim/.vimrc ~/.vimrc
+
+# apt
+xargs -a apt/packages.txt sudo apt install -y
