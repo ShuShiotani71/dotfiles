@@ -17,11 +17,8 @@ alias reload='. ~/.bashrc'
 alias path='echo -e ${PATH//:/\\n}'
 alias h='history'
 alias c='code'
-
-# Safely prompt before overwriting, moving, or removing files
-# alias cp='cp -i'
-# alias mv='mv -i'
-# alias rm='rm -i'
+alias count_items='ls -1 | wc -l'
+alias count_lines='find . -type f -exec wc -l {} +'
 
 # Tmux
 alias tm='tmux'
