@@ -42,11 +42,11 @@
     },
     // Increase/Decrease Width of the active editor pane
     {
-        "key": "ctrl+shift+w",
+        "key": "ctrl+shift+s", // s for supersize
         "command": "workbench.action.increaseViewSize"
     },
     {
-        "key": "ctrl+shift+s",
+        "key": "ctrl+shift+d", // d for downsize
         "command": "workbench.action.decreaseViewSize"
     }
 ]
