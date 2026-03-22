@@ -4,6 +4,7 @@ christian-kohler.path-intellisense
 donjayamanne.githistory
 eamodio.gitlens
 esbenp.prettier-vscode
+ethansk.restore-terminals
 github.copilot
 github.copilot-chat
 grapecity.gc-excelviewer

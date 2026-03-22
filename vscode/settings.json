@@ -139,5 +139,19 @@
     // GITLENS
     // -------
     "gitlens.ai.model": "vscode",
-    "gitlens.ai.vscode.model": "copilot:gpt-4.1"
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+    // -----------------
+    // Restore terminals
+    // -----------------
+    // launch integrated terminal upon startup
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "bash"
+                }
+            ]
+        }
+    ]
 }
