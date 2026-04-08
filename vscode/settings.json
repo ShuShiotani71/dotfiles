@@ -128,6 +128,11 @@
     "terminal.integrated.cursorBlinking": true,
     // necessary for blinking inside tmux
     "terminal.integrated.gpuAcceleration": "on",
+    // disable ctrl+v inside integrated terminal as it interferes with visual block mode.
+    // only needed for windows/WSL though. Not needed for linux
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.terminal.paste"
+    ],
 
     // --------
     // EXPLORER
