@@ -1,13 +1,4 @@
 # Dotfiles
-## Installation
-```
-# system level things
-$ bash install.sh
-
-# vscode stuff
-$ bash setup_vscode.sh # for bash
-$ .\setup_vscode.ps1 # for powershell
-```
 ## Main idea
 - The main philosophy behind my toolstack is to rely on as few tools as possible in order to reduce the amount of dependencies. Therefore I only use what is absolutely necessary and try to use what is found on most systems by default. Another important factor is AI integration; since most AI IDEs are vscode based, makes sense to use it for future-proofing.
 Final point is ease of setup and customization; vscode is easy to set up and customize, and can basically do 90% of what neovim can, IMO. I have used things like neovim, wezterm, starship, ble.sh, etc in the past but have found them to be too time consuming to setup and customize and to keep track of. For me they weren't really worth it.
