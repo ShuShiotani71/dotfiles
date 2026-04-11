@@ -1,0 +1,6 @@
+vim-gtk3
+tmux
+tree
+tar
+zip
+less

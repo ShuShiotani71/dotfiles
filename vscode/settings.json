@@ -1,0 +1,163 @@
+{
+    // ---
+    // VIM
+    // ---
+    // needed here, even if defined inside .vimrc would not apply to vscode
+    "vim.useSystemClipboard": true,
+    // idea is to put everything in .vimrc for better portability
+    "vim.vimrc.enable": true,
+    "vim.vimrc.path": "~/.vimrc",
+    // extensions
+    "vim.easymotion": true, // leader + leader + s + {char}
+    "vim.sneak": true, // s + {char0}{char1}, ; to go forward and , to go backward
+    "vim.surround": true, // ds, cs, ys + motion (normal mode), and S (visual mode)
+    "vim.commentary": true, // gcc or gc
+    "vim.indentObject": true, // {v,d,y,c,>,gc} + {ii, ai, aI} where ii is current block, ai includes the top bit as well eg for, def, if, and aI is including bottom as well so eg bash, java
+    "vim.replaceWithRegister": true, // gr + motion
+    "vim.camelCaseMotion.enable": true, // leader + w,b,e
+
+    // ------
+    // EDITOR
+    // ------
+    "editor.minimap.enabled": false,
+    "editor.hover.enabled": "on",
+    "workbench.colorTheme": "Halcyon",
+    "workbench.colorCustomizations": {
+        // scrollbar
+        "scrollbarSlider.background": "#bae67e40",
+        // active tab
+        "tab.activeBackground": "#bae67e40",
+        // file explorer
+        "list.activeSelectionBackground": "#bae67e40",
+        "list.inactiveSelectionBackground": "#bae67e40",
+        // borders
+        // "panel.border": "#bae67e40",
+        // "sideBar.border": "#bae67e40",
+        // status bar
+        "statusBar.foreground": "#d7dce2",
+        // "statusBar.background": "#bae67e40",
+        // "statusBar.noFolderBackground": "#bae67e40",
+        // "statusBar.debuggingBackground": "#bae67e40",
+        "statusBar.border": "#d7dce230",
+        "statusBar.debuggingBorder": "#d7dce230",
+        "statusBar.noFolderBorder": "#d7dce230",
+        // terminal
+        "terminal.background": "#171c2820"
+    },
+    // make scrollbars always visible regardless of cursor position
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.horizontal": "visible",
+    // for scrolling smooth (especially H and L in vim)
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    // tabs
+    "workbench.editor.wrapTabs": true,
+    // file tree indentation
+    "workbench.tree.indent": 20,
+    // for inserting newline at end of file automatically
+    "files.insertFinalNewline": true,
+    // dont highlight non ascii characters (eg japanese)
+    "editor.unicodeHighlight.nonBasicASCII": false,
+    // wrap lines
+    "editor.wordWrap": "on",
+
+    // -------
+    // JUPYTER
+    // -------
+    "jupyter.askForKernelRestart": false,
+    "notebook.lineNumbers": "on",
+    "notebook.output.scrolling": true,
+    // ipywidget stuff
+    "jupyter.widgetScriptSources": ["jsdelivr.com", "unpkg.com"],
+
+    // -------
+    // COPILOT
+    // -------
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+
+    // ---------
+    // ALL LANGS
+    // ---------
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "prettier.tabWidth": 4,
+    "editor.formatOnSave": false,
+    // necessary for enabling path intellisense
+    "typescript.suggest.paths": false,
+    "javascript.suggest.paths": false,
+
+    // ------
+    // PYTHON
+    // ------
+    // Black formatter
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": false,
+        "editor.showUnused": false,
+        // reorder imports upon save
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "black-formatter.args": ["--line-length", "99"],
+    // for isort to work with black
+    "isort.args": ["--profile", "black"],
+
+    // ---------
+    // C and CPP
+    // ---------
+    "[c]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+
+    // -------------------
+    // INTEGRATED TERMINAL
+    // -------------------
+    "terminal.integrated.env.linux": {},
+    // integrated terminal position
+    "workbench.panel.defaultLocation": "right",
+    // blink integrated terminal cursor when focused
+    "terminal.integrated.cursorBlinking": true,
+    // necessary for blinking inside tmux
+    "terminal.integrated.gpuAcceleration": "on",
+    // disable ctrl+v inside integrated terminal as it interferes with visual block mode.
+    // only needed for windows/WSL though. Not needed for linux
+    "terminal.integrated.commandsToSkipShell": [
+        "-workbench.action.terminal.paste"
+    ],
+
+    // --------
+    // EXPLORER
+    // --------
+    // confirm drag and drop
+    "explorer.confirmDragAndDrop": false,
+
+    // -------
+    // GITLENS
+    // -------
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+
+    // -----------------
+    // Restore terminals
+    // -----------------
+    // launch integrated terminal upon startup
+    "restoreTerminals.terminals": [
+        {
+            "splitTerminals": [
+                {
+                    "name": "bash"
+                }
+            ]
+        }
+    ],
+    "extensions.ignoreRecommendations": true
+}
